@@ -1,0 +1,25 @@
+{
+  "name": "Copy Data Extension",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "The extension for copy data.",
+  "browser_action": {
+    "default_icon": "image/showpicture.png",
+    "default_title": "Copy Data Title",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "js": [ "js/jquery-1.11.3.min.js", "js/content-script.js", "js/xlsx.full.min.js" ]
+    }
+  ],
+  "permissions": [
+         "tabs",
+      "bookmarks",
+      "<all_urls>"
+       ]
+}
