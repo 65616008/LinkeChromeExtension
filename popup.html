@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="js/shim.min.js"></script>
+    <script src="js/popup.js"></script>
+    <style>
+        /*button {width:100px;}*/
+        /*button ~ button {margin-top:10px;}*/
+        div{ margin: 2px; padding:2px; border:1px solid #ccc; }
+        #btnDownload{ background: #29a2ff; border-radius: 6px; color: white;       }
+    </style>
+</head>
+<body>
+    <input type="file" id="excel-file" />
+    <span>编码表头：</span><input type="text" id="tableName" name="tableName"/>
+<div>
+    <button id="btnStart">开始检查是否上架</button>
+</div>
+<div>
+    <span>佣金表头：</span><input type="text" id="tableCommission" name="tableName"/>
+    按百分比：<input type="radio" name="radio1" value="radioPer" checked />
+    按金额：<input type="radio" name="radio1" value="radioMoney"/><br/>
+    是否同步下级：<input type="checkbox" id="checkboxSynchro"/>
+    <button id="btnSetCommission">设置佣金</button>
+</div>
+<button id="btnDownload">下载操作结果</button>
+<button id="btnSetVal">给页面设置变量</button>
+<button id="btnGetVal">获取给页面设置的变量</button>
+<button id="btnGoBaidu">转跳到百度</button>
+</body>
+</html>
